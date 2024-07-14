@@ -7,11 +7,11 @@ public class PanZoom : MonoBehaviour
     Vector3 touchStart;
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
-        else if (Input.GetMouseButton(0))
+        else if (Input.GetMouseButton(1))
         {
             Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Camera.main.transform.position += direction;
